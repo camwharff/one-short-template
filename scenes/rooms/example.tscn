@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://btw2q168uxdwv"]
 
 [ext_resource type="Texture2D" uid="uid://d3krhh6iigwra" path="res://assets/breakroom/background.png" id="1_dgceo"]
-[ext_resource type="PackedScene" uid="uid://dqe0l8loftfj2" path="res://scenes/ui/clickable.tscn" id="1_e4rg8"]
+[ext_resource type="PackedScene" uid="uid://dqe0l8loftfj2" path="res://scenes/ui/task.tscn" id="1_e4rg8"]
 [ext_resource type="PackedScene" uid="uid://dsxvo881uhg3b" path="res://scenes/ui/portal.tscn" id="2_xbi64"]
 [ext_resource type="Texture2D" uid="uid://dcpyjsk6ngdnb" path="res://assets/breakroom/vending.png" id="3_0bajx"]
 [ext_resource type="Texture2D" uid="uid://dd06f0cd1lv4k" path="res://assets/breakroom/chair.png" id="3_2sest"]
@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cospybacjj03y" path="res://assets/breakroom/water.png" id="8_dhow4"]
 [ext_resource type="Texture2D" uid="uid://cee8s6x867nlo" path="res://assets/breakroom/door.png" id="10_4bxv0"]
 
-[node name="Breakroom" type="Node2D" unique_id=1113780637]
+[node name="Example" type="Node2D" unique_id=1113780637]
 
 [node name="Background" type="TextureRect" parent="." unique_id=960095621]
 offset_right = 40.0
@@ -33,17 +33,17 @@ stats = Dictionary[String, int]({
 "tidiness": -1,
 "time": 1
 })
-flags = {
+flags = Dictionary[String, bool]({
 "early_exit": false,
 "repeatable": true
-}
-icons = {
+})
+icons = Dictionary[String, String]({
 "down": "tidiness",
 "up": "energy"
-}
+})
 task_name = "have-snack"
 hover_message = "Have snack"
-phases = ["Morning", "Afternoon"]
+phases = Array[String](["Morning", "Afternoon"])
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
@@ -69,13 +69,13 @@ stats = Dictionary[String, int]({
 "tidiness": 0,
 "time": 2
 })
-flags = {
+flags = Dictionary[String, bool]({
 "early_exit": false,
 "repeatable": true
-}
+})
 task_name = "rest"
 hover_message = "Take a load off"
-phases = ["Morning", "Afternoon"]
+phases = Array[String](["Morning", "Afternoon"])
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -101,17 +101,17 @@ stats = Dictionary[String, int]({
 "tidiness": -1,
 "time": 1
 })
-flags = {
+flags = Dictionary[String, bool]({
 "early_exit": false,
 "repeatable": true
-}
-icons = {
+})
+icons = Dictionary[String, String]({
 "down": "tidiness",
 "up": "energy"
-}
+})
 task_name = "have-coffee"
 hover_message = "Get coffee"
-phases = ["Morning", "Afternoon"]
+phases = Array[String](["Morning", "Afternoon"])
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -137,14 +137,14 @@ stats = Dictionary[String, int]({
 "tidiness": -2,
 "time": 2
 })
-icons = {
+icons = Dictionary[String, String]({
 "down": "tidiness",
 "up": "energy"
-}
+})
 task_name = "cold-lunch"
 hover_message = "Have cold lunch"
-blocked_by = ["hot-lunch"]
-phases = ["Morning", "Afternoon"]
+blocked_by = Array[String](["hot-lunch"])
+phases = Array[String](["Morning", "Afternoon"])
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -172,8 +172,8 @@ stats = Dictionary[String, int]({
 })
 task_name = "hot-lunch"
 hover_message = "Have hot lunch"
-blocked_by = ["cold-lunch"]
-phases = ["Morning", "Afternoon"]
+blocked_by = Array[String](["cold-lunch"])
+phases = Array[String](["Morning", "Afternoon"])
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -199,13 +199,13 @@ stats = Dictionary[String, int]({
 "tidiness": 0,
 "time": 1
 })
-icons = {
+icons = Dictionary[String, String]({
 "down": "performance",
 "up": "energy"
-}
+})
 task_name = "water-chat"
 hover_message = "Water cooler chat"
-phases = ["Morning", "Afternoon"]
+phases = Array[String](["Morning", "Afternoon"])
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -223,7 +223,7 @@ polygon = PackedVector2Array(2.5363617, -8.693096, 10.551285, -6.813507, 11.5658
 position = Vector2(111, 225)
 destination = "Office"
 hover_message = "Return to office"
-phases = ["Morning", "Afternoon"]
+phases = Array[String](["Morning", "Afternoon"])
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 

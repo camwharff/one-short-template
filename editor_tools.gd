@@ -35,7 +35,7 @@ func load_task_data_to_editor():
 		return
 
 	for task in get_editor_interface().get_selection().get_selected_nodes():
-		if task is Clickable:
+		if task is Task:
 			var task_data: Dictionary = data[task.task_name]
 			var task_stats: Dictionary[String, int] = { }
 			for stat in task_data["stats"]:

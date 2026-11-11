@@ -6,7 +6,7 @@ signal new_game
 signal go_to_title
 signal click_sound
 
-@onready var time_text = $Display/Scores/ScoreGrid/Time/Score
+@onready var time_text = $Display/TimeBG/Time/Data
 @onready var energy_text = $Display/Scores/ScoreGrid/Energy/Score
 @onready var sat_text = $Display/Scores/ScoreGrid/Satisfaction/Score
 @onready var perf_text = $Display/Scores/ScoreGrid/Performance/Score

@@ -1,4 +1,4 @@
-class_name Clickable
+class_name Task
 extends Area2D
 
 signal hover(message: String, enable: bool, up: String, down: String)

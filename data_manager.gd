@@ -31,6 +31,6 @@ func load_task_data():
 		return
 
 	for task in data.keys():
-		var t: Clickable = GameState.tasks[task]
+		var t: Task = GameState.tasks[task]
 		for prop in data[task].keys():
 			t.set(prop, data[task][prop])

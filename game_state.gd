@@ -96,7 +96,7 @@ func _enable_phase_tasks(phase: String):
 		_update_availability(task)
 
 
-func apply_task(current_task: Clickable) -> void:
+func apply_task(current_task: Task) -> void:
 	time_left = clampi(time_left - current_task.stats["time"], 0, 100)
 	tidiness += current_task.stats["tidiness"]
 	energy += current_task.stats["energy"]
@@ -126,7 +126,7 @@ func apply_task(current_task: Clickable) -> void:
 	current_task.complete_task()
 
 
-func _update_availability(task: Clickable):
+func _update_availability(task: Task):
 	task.enable = _availability_handler(task)
 	if task.enable:
 		task.show()
@@ -136,7 +136,7 @@ func _update_availability(task: Clickable):
 		task.input_pickable = false
 
 
-func _availability_handler(task: Clickable) -> bool:
+func _availability_handler(task: Task) -> bool:
 	if not task.in_phase:
 		return false
 	if completed[task.task_name]:

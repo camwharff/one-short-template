@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cv62wp4oy27ba"]
 
 [ext_resource type="Script" uid="uid://exrp2u2kl0n0" path="res://scenes/ui/hud.gd" id="1_37p78"]
-[ext_resource type="Theme" uid="uid://cd28cejhwjqxe" path="res://resources/style_theme.tres" id="2_276te"]
+[ext_resource type="Theme" uid="uid://cd28cejhwjqxe" path="res://resources/hud_style.tres" id="2_276te"]
 [ext_resource type="Texture2D" uid="uid://8xxvsv68avfj" path="res://assets/icons/clock.png" id="3_7ihmi"]
 [ext_resource type="Texture2D" uid="uid://b53fb14tjquc" path="res://assets/icons/arrow.png" id="4_en2x2"]
 
@@ -327,101 +327,22 @@ offset_right = 682.0
 offset_bottom = 308.0
 theme_override_constants/separation = 20
 
-[node name="Scores" type="PanelContainer" parent="Display" unique_id=93455582]
+[node name="TimeBG" type="PanelContainer" parent="Display" unique_id=93455582]
 layout_mode = 2
 size_flags_horizontal = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_4p0ob")
 
-[node name="ScoreGrid" type="GridContainer" parent="Display/Scores" unique_id=1438082029]
+[node name="Time" type="HBoxContainer" parent="Display/TimeBG" unique_id=1783302157]
 layout_mode = 2
-theme_override_constants/h_separation = 50
-theme_override_constants/v_separation = 10
-columns = 3
+theme_override_constants/separation = 20
 
-[node name="Time" type="GridContainer" parent="Display/Scores/ScoreGrid" unique_id=1875941292]
-layout_mode = 2
-theme_override_constants/h_separation = 20
-columns = 2
-
-[node name="Text" type="Label" parent="Display/Scores/ScoreGrid/Time" unique_id=539284780]
+[node name="Text" type="Label" parent="Display/TimeBG/Time" unique_id=539284780]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
 text = "Time Left:"
 
-[node name="Score" type="Label" parent="Display/Scores/ScoreGrid/Time" unique_id=1710155374]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
-text = "0"
-
-[node name="Energy" type="GridContainer" parent="Display/Scores/ScoreGrid" unique_id=58274952]
-visible = false
-layout_mode = 2
-theme_override_constants/h_separation = 20
-columns = 2
-
-[node name="Text" type="Label" parent="Display/Scores/ScoreGrid/Energy" unique_id=1138675012]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
-text = "Energy:"
-
-[node name="Score" type="Label" parent="Display/Scores/ScoreGrid/Energy" unique_id=1540255453]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
-text = "0"
-
-[node name="Satisfaction" type="GridContainer" parent="Display/Scores/ScoreGrid" unique_id=1049244012]
-visible = false
-layout_mode = 2
-theme_override_constants/h_separation = 20
-columns = 2
-
-[node name="Text" type="Label" parent="Display/Scores/ScoreGrid/Satisfaction" unique_id=1993557457]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
-text = "Satisfaction:"
-
-[node name="Score" type="Label" parent="Display/Scores/ScoreGrid/Satisfaction" unique_id=1831031485]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
-text = "0"
-
-[node name="Performance" type="GridContainer" parent="Display/Scores/ScoreGrid" unique_id=1995681555]
-visible = false
-layout_mode = 2
-theme_override_constants/h_separation = 20
-columns = 2
-
-[node name="Text" type="Label" parent="Display/Scores/ScoreGrid/Performance" unique_id=1086020731]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
-text = "Performance:"
-
-[node name="Score" type="Label" parent="Display/Scores/ScoreGrid/Performance" unique_id=1366206620]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
-text = "0"
-
-[node name="Tidiness" type="GridContainer" parent="Display/Scores/ScoreGrid" unique_id=606427344]
-visible = false
-layout_mode = 2
-theme_override_constants/h_separation = 20
-columns = 2
-
-[node name="Text" type="Label" parent="Display/Scores/ScoreGrid/Tidiness" unique_id=1523918821]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 24
-text = "Tidiness:"
-
-[node name="Score" type="Label" parent="Display/Scores/ScoreGrid/Tidiness" unique_id=1074373502]
+[node name="Data" type="Label" parent="Display/TimeBG/Time" unique_id=1710155374]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 24
